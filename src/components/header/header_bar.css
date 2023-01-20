@@ -1,0 +1,6 @@
+.headerBarContainer {
+  background-color: yellow;
+  display: flex;
+  align-items: center;
+  height: 4vh;
+}

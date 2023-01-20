@@ -1,8 +1,12 @@
 import React from "react";
-import "./footer_bar.css";
+import { FooterContainer } from "./footer_styled";
 
 const FooterBar = () => {
-  return <div>FooterBar</div>;
+  return (
+    <FooterContainer>
+      <p>FooterBar</p>
+    </FooterContainer>
+  );
 };
 
 export default FooterBar;

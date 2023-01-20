@@ -1,8 +1,12 @@
 import React from "react";
-import "./sidebar.css";
+import { SidebarContainer } from "./sidebar_styled";
 
 const Sidebar = () => {
-  return <div>Sidebar</div>;
+  return (
+    <SidebarContainer>
+      <p>Sidebar</p>
+    </SidebarContainer>
+  );
 };
 
 export default Sidebar;
