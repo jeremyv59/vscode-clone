@@ -1,26 +1,8 @@
-import React, { useState } from "react";
-import { Resizable, ResizableBox } from "react-resizable";
+import React from "react";
+import { ExplorerContainer } from "./explorer_styled";
 
 const ExplorerMenu = () => {
-  const [width, setWidth] = useState(200);
-
-  const onResize = (event, { element, size, handle }) => {
-    setWidth(size.width);
-  };
-
-  return (
-    <Resizable width={width} height={450} onResize={onResize}>
-      <div
-        className="box"
-        style={{
-          width: width + "px",
-          backgroundColor: "green",
-        }}
-      >
-        <span>Contents</span>
-      </div>
-    </Resizable>
-  );
+  return <ExplorerContainer>{/* <p>Explorer Menu</p> */}</ExplorerContainer>;
 };
 
 export default ExplorerMenu;

@@ -8,5 +8,6 @@ export const AppContainer = styled.div`
 
 export const MainContent = styled.div`
   display: flex;
-  height: 93vh;
+  height: 92vh;
+  width: 100%;
 `;

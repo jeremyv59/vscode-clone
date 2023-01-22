@@ -1,8 +1,12 @@
 import React from "react";
-import "./file_content.css";
+import { FileContentContainer } from "./file_styled.jsx";
 
 const FileContent = () => {
-  return <div>FileContent</div>;
+  return (
+    <FileContentContainer>
+      <p>File Content</p>
+    </FileContentContainer>
+  );
 };
 
 export default FileContent;

@@ -4,6 +4,7 @@ import FileContent from "./components/file/FileContent";
 import FooterBar from "./components/footer/FooterBar";
 import HeaderBar from "./components/header/HeaderBar";
 import Sidebar from "./components/sidebar/Sidebar";
+import Splitter from "./components/splitter/Splitter";
 
 function App() {
   return (
@@ -11,8 +12,7 @@ function App() {
       <HeaderBar></HeaderBar>
       <MainContent>
         <Sidebar></Sidebar>
-        <ExplorerMenu></ExplorerMenu>
-        <FileContent></FileContent>
+        <Splitter></Splitter>
       </MainContent>
       <FooterBar></FooterBar>
     </AppContainer>
