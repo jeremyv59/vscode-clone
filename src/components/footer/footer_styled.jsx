@@ -9,10 +9,6 @@ export const FooterContainer = styled.div`
     color: #ffffff;
     cursor: pointer;
   }
-
-  & .space {
-    margin-left: 0.3rem;
-  }
 `;
 
 export const RemoteContainer = styled.div`
@@ -27,19 +23,22 @@ export const RemoteContainer = styled.div`
 export const ContainerInfos = styled.div`
   width: 100%;
   background-color: blue;
-  padding-left: 0.5rem;
+  display: flex;
+  justify-content: space-between;
 `;
 
 export const LeftInfos = styled.div`
   height: 100%;
   display: flex;
-  gap: 0.5rem;
+  gap: 0.25rem;
+  padding-left: 0.1rem;
 `;
 
 export const OneInfoContainer = styled.div`
   background-color: brown;
   height: 100%;
-  padding: 0.2rem;
+  padding: 0rem 0.5rem;
+  gap: 0.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,8 +49,11 @@ export const TextInfo = styled.p`
   font-size: 13px;
   color: #ffffff;
   background-color: brown;
-  margin-left: 0.3rem;
   cursor: pointer;
 `;
 
-export const RightInfos = styled.div``;
+export const RightInfos = styled.div`
+  display: flex;
+  gap: 0.25rem;
+  padding-right: 0.1rem;
+`;

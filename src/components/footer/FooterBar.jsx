@@ -18,6 +18,11 @@ import {
   VscGitMerge,
   VscError,
   VscWarning,
+  VscJson,
+  VscBroadcast,
+  VscCheck,
+  VscFeedback,
+  VscBell,
 } from "react-icons/vsc";
 
 const infos = [
@@ -26,12 +31,8 @@ const infos = [
     text: ["main*"],
   },
   {
-    icon: [
-      <VscRefresh className="icon" size={16}></VscRefresh>,
-      <VscArrowDown className="icon" size={14}></VscArrowDown>,
-      <VscArrowUp className="icon" size={14}></VscArrowUp>,
-    ],
-    text: ["0", "2"],
+    icon: [<VscRefresh className="icon" size={16}></VscRefresh>],
+    text: [],
   },
 
   {
@@ -76,7 +77,40 @@ const FooterBar = () => {
             );
           })}
         </LeftInfos>
-        <RightInfos></RightInfos>
+        <RightInfos>
+          <OneInfoContainer>
+            <TextInfo>Ln 77, Col 31</TextInfo>
+          </OneInfoContainer>
+          <OneInfoContainer>
+            <TextInfo>Spaces: 2</TextInfo>
+          </OneInfoContainer>
+          <OneInfoContainer>
+            <TextInfo>UTF-8</TextInfo>
+          </OneInfoContainer>
+          <OneInfoContainer>
+            <TextInfo>CRLF</TextInfo>
+          </OneInfoContainer>
+          <OneInfoContainer>
+            <VscJson size={16}></VscJson>
+          </OneInfoContainer>
+          <OneInfoContainer>
+            <TextInfo>JavaScript React</TextInfo>
+          </OneInfoContainer>
+          <OneInfoContainer>
+            <VscBroadcast size={16}></VscBroadcast>
+            <TextInfo>Go Live</TextInfo>
+          </OneInfoContainer>
+          <OneInfoContainer>
+            <VscCheck size={16}></VscCheck>
+            <TextInfo>Prettier</TextInfo>
+          </OneInfoContainer>
+          <OneInfoContainer>
+            <VscFeedback size={16}></VscFeedback>
+          </OneInfoContainer>
+          <OneInfoContainer>
+            <VscBell size={16}></VscBell>
+          </OneInfoContainer>
+        </RightInfos>
       </ContainerInfos>
     </FooterContainer>
   );
