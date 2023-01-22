@@ -10,7 +10,6 @@ export const SidebarContainer = styled.div`
 `;
 
 export const TopIconsContainer = styled.div`
-  background-color: green;
   height: 85%;
   display: flex;
   flex-direction: column;
@@ -22,11 +21,10 @@ export const IconContainer = styled.div`
   height: 10%;
   display: flex;
   align-items: center;
-  background-color: purple;
-  border-left: 2px solid black;
+  border-left: 2px solid transparent;
 
   & .topIcon {
-    background-color: red;
+    cursor: pointer;
     width: 100%;
     height: 60%;
   }
@@ -38,6 +36,4 @@ export const BottomIconsContainer = styled.div`
   align-items: center;
   justify-content: space-around;
   height: 15%;
-
-  background-color: blue;
 `;

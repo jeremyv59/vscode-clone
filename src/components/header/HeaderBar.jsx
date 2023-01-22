@@ -17,19 +17,25 @@ import { MdOutlineHistoryToggleOff, MdClose } from "react-icons/md";
 import { BiWindows } from "react-icons/bi";
 import { RxBadge } from "react-icons/rx";
 
+const options = [
+  "File",
+  "Edit",
+  "Selection",
+  "View",
+  "Go",
+  "Run",
+  "Terminal",
+  "Help",
+];
+
 const HeaderBar = () => {
   return (
     <HeaderBarContainer>
       <LeftPartContainer>
         <SiVisualstudiocode color="#2660A4" size={20}></SiVisualstudiocode>
-        <OptionsItem>File</OptionsItem>
-        <OptionsItem>Edit</OptionsItem>
-        <OptionsItem>Selection</OptionsItem>
-        <OptionsItem>View</OptionsItem>
-        <OptionsItem>Go</OptionsItem>
-        <OptionsItem>Run</OptionsItem>
-        <OptionsItem>Terminal</OptionsItem>
-        <OptionsItem>Help</OptionsItem>
+        {options.map((option) => {
+          return <OptionsItem>{option}</OptionsItem>;
+        })}
       </LeftPartContainer>
 
       <MiddlePartContainer>
