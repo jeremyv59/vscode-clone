@@ -25,7 +25,7 @@ import {
   VscBell,
 } from "react-icons/vsc";
 
-const infos = [
+const leftInfos = [
   {
     icon: [<VscSourceControl className="icon" size={16}></VscSourceControl>],
     text: ["main*"],
@@ -52,6 +52,49 @@ const infos = [
   },
 ];
 
+const rightInfos = [
+  {
+    icon: [],
+    text: ["Ln 58, Col 20"],
+  },
+  {
+    icon: [],
+    text: ["Spaces: 2"],
+  },
+  {
+    icon: [],
+    text: ["UTF-8"],
+  },
+  {
+    icon: [],
+    text: ["CRLF"],
+  },
+  {
+    icon: [<VscJson className="icon" size={16}></VscJson>],
+    text: [],
+  },
+  {
+    icon: [],
+    text: ["JavaScript React"],
+  },
+  {
+    icon: [<VscBroadcast size={16}></VscBroadcast>],
+    text: ["Go Live"],
+  },
+  {
+    icon: [<VscCheck size={16}></VscCheck>],
+    text: ["Prettier"],
+  },
+  {
+    icon: [<VscFeedback size={16}></VscFeedback>],
+    text: [],
+  },
+  {
+    icon: [<VscBell size={16}></VscBell>],
+    text: [],
+  },
+];
+
 const FooterBar = () => {
   return (
     <FooterContainer>
@@ -60,7 +103,7 @@ const FooterBar = () => {
       </RemoteContainer>
       <ContainerInfos>
         <LeftInfos>
-          {infos.map((info) => {
+          {leftInfos.map((info) => {
             return (
               <OneInfoContainer>
                 {info.icon.map((icon, index) => {
@@ -78,38 +121,24 @@ const FooterBar = () => {
           })}
         </LeftInfos>
         <RightInfos>
-          <OneInfoContainer>
-            <TextInfo>Ln 77, Col 31</TextInfo>
-          </OneInfoContainer>
-          <OneInfoContainer>
-            <TextInfo>Spaces: 2</TextInfo>
-          </OneInfoContainer>
-          <OneInfoContainer>
-            <TextInfo>UTF-8</TextInfo>
-          </OneInfoContainer>
-          <OneInfoContainer>
-            <TextInfo>CRLF</TextInfo>
-          </OneInfoContainer>
-          <OneInfoContainer>
-            <VscJson size={16}></VscJson>
-          </OneInfoContainer>
-          <OneInfoContainer>
-            <TextInfo>JavaScript React</TextInfo>
-          </OneInfoContainer>
-          <OneInfoContainer>
-            <VscBroadcast size={16}></VscBroadcast>
-            <TextInfo>Go Live</TextInfo>
-          </OneInfoContainer>
-          <OneInfoContainer>
-            <VscCheck size={16}></VscCheck>
-            <TextInfo>Prettier</TextInfo>
-          </OneInfoContainer>
-          <OneInfoContainer>
-            <VscFeedback size={16}></VscFeedback>
-          </OneInfoContainer>
-          <OneInfoContainer>
-            <VscBell size={16}></VscBell>
-          </OneInfoContainer>
+          {rightInfos.map((info) => {
+            return (
+              <OneInfoContainer>
+                {info.icon.length > 0
+                  ? info.icon.map((icon, index) => {
+                      return (
+                        <React.Fragment>
+                          {icon}
+                          <TextInfo>{info.text[index]}</TextInfo>
+                        </React.Fragment>
+                      );
+                    })
+                  : info.text.map((text) => {
+                      return <TextInfo>{text}</TextInfo>;
+                    })}
+              </OneInfoContainer>
+            );
+          })}
         </RightInfos>
       </ContainerInfos>
     </FooterContainer>
