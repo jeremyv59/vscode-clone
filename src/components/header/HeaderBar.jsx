@@ -4,6 +4,7 @@ import {
   HeaderMidTitle,
   LeftPartContainer,
   MiddlePartContainer,
+  OptionItemContainer,
   OptionsItem,
   RightPartContainer,
 } from "./header_styled";
@@ -34,7 +35,11 @@ const HeaderBar = () => {
       <LeftPartContainer>
         <SiVisualstudiocode color="#2660A4" size={20}></SiVisualstudiocode>
         {options.map((option) => {
-          return <OptionsItem>{option}</OptionsItem>;
+          return (
+            <OptionItemContainer>
+              <OptionsItem>{option}</OptionsItem>
+            </OptionItemContainer>
+          );
         })}
       </LeftPartContainer>
 
@@ -53,7 +58,7 @@ const HeaderBar = () => {
         <TbDeviceMobile size={24} className="displayIcon"></TbDeviceMobile>
         <MdOutlineHistoryToggleOff
           size={24}
-          className="lastPanelIcon"
+          className="displayIcon"
         ></MdOutlineHistoryToggleOff>
 
         <RxBadge className="actionBtn" size={20}></RxBadge>

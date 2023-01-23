@@ -1,47 +1,77 @@
 import styled from "styled-components";
+import { GlobalTheme } from "../../theme/GlobalTheme";
 
 export const HeaderBarContainer = styled.div`
-  background-color: yellow;
+  background-color: ${GlobalTheme.colors.darkBlue};
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
   padding: 0rem 0.8rem;
+  width: 100%;
   height: 4.5vh;
 `;
 
 export const LeftPartContainer = styled.div`
   display: flex;
-  width: 30%;
-  gap: 1.2rem;
+  width: 33%;
+  gap: 0.7rem;
 `;
 
 export const OptionsItem = styled.p`
-  color: dark;
+  color: ${GlobalTheme.colors.white};
   font-size: 15px;
 `;
 
+export const OptionItemContainer = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 0rem 0.3rem;
+
+  &:hover {
+    background-color: ${GlobalTheme.colors.lightGray};
+    border-radius 8px;
+
+    ${OptionsItem} {
+      color : ${GlobalTheme.colors.darkBlue};
+    }
+  }
+`;
+
 export const MiddlePartContainer = styled.div`
-  width: 40%;
+  width: 34%;
   text-align: center;
 `;
 
 export const HeaderMidTitle = styled.p`
   font-size: 14px;
+  color: ${GlobalTheme.colors.white};
 `;
 
 export const RightPartContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  width: 30%;
+  width: 33%;
 
   & .displayIcon {
     margin-right: 0.1rem;
+    color: ${GlobalTheme.colors.white};
+
+    &:hover {
+      background-color: ${GlobalTheme.colors.lightGray};
+      color : ${GlobalTheme.colors.darkBlue};
+      border-radius 8px;
+    }
   }
 
   & .actionBtn {
     margin-left: 1.4rem;
-    background-color: purple;
+    color: ${GlobalTheme.colors.white};
+
+    &:hover {
+      background-color: ${GlobalTheme.colors.lightGray};
+      color : ${GlobalTheme.colors.darkBlue};
+      border-radius 8px;
+    }
   }
 `;
