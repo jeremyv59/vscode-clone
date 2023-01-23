@@ -2,8 +2,7 @@ import React from "react";
 import {
   ExplorerContainer,
   ExplorerHeader,
-  ExplorerList,
-  ExplorerListItem,
+  ExplorerItem,
   HeaderTitle,
   ExplorerItemContainer,
 } from "./explorer_styled";
@@ -19,7 +18,7 @@ const ExplorerMenu = () => {
 
       <ExplorerItemContainer>
         <VscChevronRight color="#ffffff"></VscChevronRight>
-        <ExplorerListItem>OPEN EDITORS</ExplorerListItem>
+        <ExplorerItem>OPEN EDITORS</ExplorerItem>
       </ExplorerItemContainer>
     </ExplorerContainer>
   );

@@ -25,7 +25,7 @@ export const ExplorerItemContainer = styled.div`
   border-bottom: 1px solid black;
 `;
 
-export const ExplorerListItem = styled.li`
+export const ExplorerItem = styled.p`
   background-color: green;
   padding: 0.3rem;
   font-size: 12px;
