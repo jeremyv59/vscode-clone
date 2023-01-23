@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   BottomIconsContainer,
   IconContainer,
@@ -17,39 +17,45 @@ import {
   VscAccount,
   VscSettingsGear,
 } from "react-icons/vsc";
+import { GlobalTheme } from "../../theme/GlobalTheme";
+
+const sidebarIcons = [
+  <VscCopy className="topIcon" size={30}></VscCopy>,
+  <VscSearch className="topIcon" size={30}></VscSearch>,
+  <VscSourceControl className="topIcon" size={30}></VscSourceControl>,
+  <VscRemoteExplorer className="topIcon" size={30}></VscRemoteExplorer>,
+  <VscDebugAlt className="topIcon" size={30}></VscDebugAlt>,
+  <VscExtensions className="topIcon" size={30}></VscExtensions>,
+  <VscLiveShare className="topIcon" size={30}></VscLiveShare>,
+  <VscGithubAlt className="topIcon" size={30}></VscGithubAlt>,
+];
 
 const Sidebar = () => {
+  const [selectedIconId, setSelectedIconId] = useState(0);
+
+  const handleSelectIcon = (idValue) => {
+    setSelectedIconId(idValue);
+  };
+
   return (
     <SidebarContainer>
       <TopIconsContainer>
-        <IconContainer>
-          <VscCopy className="topIcon" size={30}></VscCopy>
-        </IconContainer>
-        <IconContainer>
-          <VscSearch className="topIcon" size={30}></VscSearch>
-        </IconContainer>
-        <IconContainer>
-          <VscSourceControl className="topIcon" size={30}></VscSourceControl>
-        </IconContainer>
-        <IconContainer>
-          <VscRemoteExplorer className="topIcon" size={30}></VscRemoteExplorer>
-        </IconContainer>
-        <IconContainer>
-          <VscDebugAlt className="topIcon" size={30}></VscDebugAlt>
-        </IconContainer>
-        <IconContainer>
-          <VscExtensions className="topIcon" size={30}></VscExtensions>
-        </IconContainer>
-        <IconContainer>
-          <VscLiveShare className="topIcon" size={30}></VscLiveShare>
-        </IconContainer>
-        <IconContainer>
-          <VscGithubAlt className="topIcon" size={30}></VscGithubAlt>
-        </IconContainer>
+        {sidebarIcons.map((icon, index) => {
+          return (
+            <IconContainer
+              key={index}
+              id={index}
+              onClick={() => handleSelectIcon(index)}
+              active={Number(selectedIconId) === index ? true : false}
+            >
+              {icon}
+            </IconContainer>
+          );
+        })}
       </TopIconsContainer>
       <BottomIconsContainer>
-        <VscAccount size={30}></VscAccount>
-        <VscSettingsGear size={30}></VscSettingsGear>
+        <VscAccount className="bottomIcon" size={30}></VscAccount>
+        <VscSettingsGear className="bottomIcon" size={30}></VscSettingsGear>
       </BottomIconsContainer>
     </SidebarContainer>
   );

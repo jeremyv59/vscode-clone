@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import { GlobalTheme } from "../../theme/GlobalTheme";
 
 export const SidebarContainer = styled.div`
-  background-color: purple;
+  background-color: ${GlobalTheme.colors.darkBlueLight};
   width: 4%;
   height: 100%;
   display: flex;
@@ -21,12 +22,23 @@ export const IconContainer = styled.div`
   height: 10%;
   display: flex;
   align-items: center;
-  border-left: 2px solid transparent;
+  border-left: ${(props) =>
+    props.active
+      ? `3px solid ${GlobalTheme.colors.white}`
+      : "3px solid transparent"};
 
   & .topIcon {
     cursor: pointer;
     width: 100%;
     height: 60%;
+    color: ${(props) =>
+      props.active
+        ? `${GlobalTheme.colors.white}`
+        : `${GlobalTheme.colors.darkBlue}`};
+  }
+
+  & .topIcon:hover {
+    color: ${GlobalTheme.colors.white};
   }
 `;
 
@@ -36,4 +48,13 @@ export const BottomIconsContainer = styled.div`
   align-items: center;
   justify-content: space-around;
   height: 15%;
+  cursor: pointer;
+
+  & .bottomIcon {
+    color: ${GlobalTheme.colors.darkBlue};
+  }
+
+  & :hover {
+    color: ${GlobalTheme.colors.white};
+  }
 `;

@@ -1,9 +1,10 @@
 import styled from "styled-components";
+import { GlobalTheme } from "../../theme/GlobalTheme";
 
 export const FooterContainer = styled.div`
   height: 3.5vh;
-  background-color: gray;
   display: flex;
+  background-color: ${GlobalTheme.colors.skyBlue};
 
   & .icon {
     color: #ffffff;
@@ -22,7 +23,6 @@ export const RemoteContainer = styled.div`
 
 export const ContainerInfos = styled.div`
   width: 100%;
-  background-color: blue;
   display: flex;
   justify-content: space-between;
 `;
@@ -34,22 +34,24 @@ export const LeftInfos = styled.div`
   padding-left: 0.1rem;
 `;
 
+export const TextInfo = styled.p`
+  font-size: 13px;
+  color: #ffffff;
+  cursor: pointer;
+`;
+
 export const OneInfoContainer = styled.div`
-  background-color: brown;
+  // background-color: green;
   height: 100%;
   padding: 0rem 0.4rem;
   gap: 0.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
-`;
 
-export const TextInfo = styled.p`
-  font-size: 13px;
-  color: #ffffff;
-  background-color: brown;
-  cursor: pointer;
+  &:hover {
+    background-color: ${GlobalTheme.colors.skyBlueLight};
+  }
 `;
 
 export const RightInfos = styled.div`

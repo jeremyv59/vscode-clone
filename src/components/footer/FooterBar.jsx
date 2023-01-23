@@ -78,19 +78,19 @@ const rightInfos = [
     text: ["JavaScript React"],
   },
   {
-    icon: [<VscBroadcast size={16}></VscBroadcast>],
+    icon: [<VscBroadcast className="icon" size={16}></VscBroadcast>],
     text: ["Go Live"],
   },
   {
-    icon: [<VscCheck size={16}></VscCheck>],
+    icon: [<VscCheck className="icon" size={16}></VscCheck>],
     text: ["Prettier"],
   },
   {
-    icon: [<VscFeedback size={16}></VscFeedback>],
+    icon: [<VscFeedback className="icon" size={16}></VscFeedback>],
     text: [],
   },
   {
-    icon: [<VscBell size={16}></VscBell>],
+    icon: [<VscBell className="icon" size={16}></VscBell>],
     text: [],
   },
 ];
