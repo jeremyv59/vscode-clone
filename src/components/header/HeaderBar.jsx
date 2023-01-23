@@ -53,7 +53,7 @@ const HeaderBar = () => {
         <TbDeviceMobile size={24} className="displayIcon"></TbDeviceMobile>
         <MdOutlineHistoryToggleOff
           size={24}
-          className="displayIcon"
+          className="lastPanelIcon"
         ></MdOutlineHistoryToggleOff>
 
         <RxBadge className="actionBtn" size={20}></RxBadge>

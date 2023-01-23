@@ -37,13 +37,11 @@ export const RightPartContainer = styled.div`
   width: 30%;
 
   & .displayIcon {
-    margin-right: 0.2rem;
+    margin-right: 0.1rem;
   }
 
   & .actionBtn {
-    margin-left: 1.6rem;
+    margin-left: 1.4rem;
     background-color: purple;
   }
 `;
-
-export const ReduceWindowIcon = styled.p``;

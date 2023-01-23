@@ -36,7 +36,7 @@ const ExplorerMenu = () => {
         <ThreeContainer>
           <CustomThree>
             <CustomThree.Folder name="src">
-              <CustomThree.Folder name="Components">
+              <CustomThree.Folder name="components">
                 <CustomThree.File name="Modal.js" />
                 <CustomThree.File name="Modal.css" />
               </CustomThree.Folder>

@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
 export const StyledFolder = styled.div`
-  padding-left: 20px;
+  padding-left: 1rem;
 
   .folder--label {
     display: flex;
     align-items: center;
     span {
-      margin-left: 5px;
+      margin-left: 0.1rem;
     }
   }
 `;
