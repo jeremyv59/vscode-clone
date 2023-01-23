@@ -30,14 +30,14 @@ export const ContainerInfos = styled.div`
 export const LeftInfos = styled.div`
   height: 100%;
   display: flex;
-  gap: 0.25rem;
+  gap: 0.5rem;
   padding-left: 0.1rem;
 `;
 
 export const OneInfoContainer = styled.div`
   background-color: brown;
   height: 100%;
-  padding: 0rem 0.5rem;
+  padding: 0rem 0.4rem;
   gap: 0.2rem;
   display: flex;
   justify-content: center;

@@ -1,8 +1,20 @@
 import React from "react";
-import { ExplorerContainer } from "./explorer_styled";
+import {
+  ExplorerContainer,
+  ExplorerHeader,
+  HeaderTitle,
+} from "./explorer_styled";
+import { VscEllipsis } from "react-icons/vsc";
 
 const ExplorerMenu = () => {
-  return <ExplorerContainer>{/* <p>Explorer Menu</p> */}</ExplorerContainer>;
+  return (
+    <ExplorerContainer>
+      <ExplorerHeader>
+        <HeaderTitle>EXPLORER</HeaderTitle>
+        <VscEllipsis color="#ffffff" size={20}></VscEllipsis>
+      </ExplorerHeader>
+    </ExplorerContainer>
+  );
 };
 
 export default ExplorerMenu;

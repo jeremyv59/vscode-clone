@@ -7,10 +7,10 @@ const CodeContent = () => {
     <CodeContentContainer>
       <Splitter flexDirectionValue={"column"} directionValue={"vertical"}>
         <div style={{ backgroundColor: "green", width: "100%" }}>
-          <p>Salut le vieux</p>
+          <p>File Content Div</p>
         </div>
         <div style={{ backgroundColor: "purple", width: "100%" }}>
-          <p>Oui je parle de toi</p>
+          <p>Terminal Div</p>
         </div>
       </Splitter>
     </CodeContentContainer>
