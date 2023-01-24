@@ -4,9 +4,6 @@ export const FilesArray = [
     fileName: "Modal.js",
     language: "javascript",
     content: `
-          \`\`\`react
-          const variable = 'hello';
-          
           import React from "react";
           import styles from "./Modal.module.css";
           import { RiCloseLine } from "react-icons/ri";
@@ -46,7 +43,6 @@ export const FilesArray = [
           };
           
           export default Modal;
-          \`\`\`
           `,
   },
 ];
