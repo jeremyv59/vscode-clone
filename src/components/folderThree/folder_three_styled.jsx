@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const StyledFolder = styled.div`
   padding-left: 1rem;
+  cursor: pointer;
 
   .folder--label {
     display: flex;

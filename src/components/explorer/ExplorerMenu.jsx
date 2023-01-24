@@ -10,7 +10,7 @@ import {
 import { VscEllipsis, VscChevronRight, VscChevronDown } from "react-icons/vsc";
 import CustomThree from "../three/CustomThree";
 
-const ExplorerMenu = () => {
+const ExplorerMenu = ({ setFileSelected }) => {
   const [projectOpened, setProjectOpened] = useState(false);
 
   const handleClickContainer = () => {
@@ -34,10 +34,13 @@ const ExplorerMenu = () => {
       </ExplorerItemContainer>
       {projectOpened ? (
         <ThreeContainer>
-          <CustomThree>
+          <CustomThree setSelectedFile={setFileSelected()}>
             <CustomThree.Folder name="src">
               <CustomThree.Folder name="components">
-                <CustomThree.File name="Modal.js" />
+                <CustomThree.File
+                  selectedFileSetter={setFileSelected()}
+                  name="Modal.js"
+                />
                 <CustomThree.File name="Modal.css" />
               </CustomThree.Folder>
               <CustomThree.File name="index.js" />
