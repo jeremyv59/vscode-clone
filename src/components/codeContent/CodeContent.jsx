@@ -13,7 +13,7 @@ const CodeContent = () => {
   return (
     <CodeContentContainer>
       <Splitter flexDirectionValue={"column"} directionValue={"vertical"}>
-        <div style={{ width: "100%" }}>
+        <div style={{ backgroundColor: "green", maxHeight: "100%" }}>
           {FilesArray.map((file) => {
             return file.fileName === context.selectedFile ? (
               <p key={file.id}>

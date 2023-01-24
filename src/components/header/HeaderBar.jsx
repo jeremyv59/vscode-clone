@@ -8,15 +8,16 @@ import {
   OptionsItem,
   RightPartContainer,
 } from "./header_styled";
-import { SiVisualstudiocode } from "react-icons/si";
 import {
-  TbSquareToggle,
-  TbSquareToggleHorizontal,
-  TbDeviceMobile,
-} from "react-icons/tb";
-import { MdOutlineHistoryToggleOff, MdClose } from "react-icons/md";
-import { BiWindows } from "react-icons/bi";
-import { RxBadge } from "react-icons/rx";
+  VscChromeMaximize,
+  VscChromeMinimize,
+  VscClose,
+  VscSplitHorizontal,
+  VscSplitVertical,
+} from "react-icons/vsc";
+import { SiVisualstudiocode } from "react-icons/si";
+import { TbDeviceMobile } from "react-icons/tb";
+import { MdOutlineHistoryToggleOff } from "react-icons/md";
 
 const options = [
   "File",
@@ -50,20 +51,20 @@ const HeaderBar = () => {
       </MiddlePartContainer>
 
       <RightPartContainer>
-        <TbSquareToggleHorizontal
+        <VscSplitHorizontal
           size={24}
           className="displayIcon"
-        ></TbSquareToggleHorizontal>
-        <TbSquareToggle size={24} className="displayIcon"></TbSquareToggle>
+        ></VscSplitHorizontal>
+        <VscSplitVertical size={24} className="displayIcon"></VscSplitVertical>
         <TbDeviceMobile size={24} className="displayIcon"></TbDeviceMobile>
         <MdOutlineHistoryToggleOff
           size={24}
           className="displayIcon"
         ></MdOutlineHistoryToggleOff>
 
-        <RxBadge className="actionBtn" size={20}></RxBadge>
-        <BiWindows className="actionBtn" size={20}></BiWindows>
-        <MdClose className="actionBtn" size={20}></MdClose>
+        <VscChromeMinimize className="actionBtn" size={20}></VscChromeMinimize>
+        <VscChromeMaximize className="actionBtn" size={20}></VscChromeMaximize>
+        <VscClose className="actionBtn" size={20}></VscClose>
       </RightPartContainer>
     </HeaderBarContainer>
   );

@@ -56,11 +56,13 @@ export const RightPartContainer = styled.div`
   & .displayIcon {
     margin-right: 0.1rem;
     color: ${GlobalTheme.colors.white};
+    display : flex;
+    justify-content:center;
 
     &:hover {
       background-color: ${GlobalTheme.colors.lightGray};
       color : ${GlobalTheme.colors.darkBlue};
-      border-radius 8px;
+      border-radius : 4px;
     }
   }
 
