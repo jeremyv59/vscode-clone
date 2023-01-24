@@ -19,3 +19,19 @@ html {
 body {
   font-family: "Roboto", sans-serif;
 }
+
+pre {
+  tab-size: 2;
+  color: white;
+  background: #263238;
+  padding: 20px;
+  font-weight: bold;
+}
+
+.hljs {
+  display: block !important;
+  padding: 0.5em !important;
+  color: #abb2bf !important;
+  background: #282c34 !important;
+  overflow-y: scroll;
+}

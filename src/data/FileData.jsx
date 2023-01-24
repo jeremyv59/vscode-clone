@@ -5,45 +5,46 @@ export const FilesArray = [
     fileName: "Modal.js",
     language: "javascript",
     content: `
-          import React from "react";
-          import styles from "./Modal.module.css";
-          import { RiCloseLine } from "react-icons/ri";
-          
-          const Modal = ({ setIsOpen }) => {
-            return (
-              <>
-                <div className={styles.darkBG} onClick={() => setIsOpen(false)} />
-                <div className={styles.centered}>
-                  <div className={styles.modal}>
-                    <div className={styles.modalHeader}>
-                      <h5 className={styles.heading}>Dialog</h5>
-                    </div>
-                    <button className={styles.closeBtn} onClick={() => setIsOpen(false)}>
-                      <RiCloseLine style={{ marginBottom: "-3px" }} />
-                    </button>
-                    <div className={styles.modalContent}>
-                      Are you sure you want to delete the item?
-                    </div>
-                    <div className={styles.modalActions}>
-                      <div className={styles.actionsContainer}>
-                        <button className={styles.deleteBtn} onClick={() => setIsOpen(false)}>
-                          Delete
-                        </button>
-                        <button
-                          className={styles.cancelBtn}
-                          onClick={() => setIsOpen(false)}
-                        >
-                          Cancel
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </>
-            );
-          };
-          
-          export default Modal;
+    (function () {
+      document.querySelectorAll(".open-modal").forEach(function (trigger) {
+          trigger.addEventListener("click", function () {
+              hideAllModalWindows();
+              showModalWindow(this);
+          });
+      });
+      
+      document.querySelectorAll(".modal-hide").forEach(function (closeBtn) {
+          closeBtn.addEventListener("click", function () {
+              hideAllModalWindows();
+          });
+      });
+      
+      document.querySelector(".modal-fader").addEventListener("click", function () {
+          hideAllModalWindows();
+      });
+  })();
+  
+  function showModalWindow (buttonEl) {
+      var modalTarget = "#" + buttonEl.getAttribute("data-target");
+      
+      document.querySelector(".modal-fader").className += " active";
+      document.querySelector(modalTarget).className += " active";
+  }
+  
+  function hideAllModalWindows () {
+      var modalFader = document.querySelector(".modal-fader");
+      var modalWindows = document.querySelectorAll(".modal-window");
+      
+      if(modalFader.className.indexOf("active") !== -1) {
+          modalFader.className = modalFader.className.replace("active", "");
+      }
+      
+      modalWindows.forEach(function (modalWindow) {
+          if(modalWindow.className.indexOf("active") !== -1) {
+              modalWindow.className = modalWindow.className.replace("active", "");
+          }
+      });
+  }
           `,
   },
   {

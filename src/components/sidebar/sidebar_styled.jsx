@@ -11,7 +11,7 @@ export const SidebarContainer = styled.div`
 `;
 
 export const TopIconsContainer = styled.div`
-  height: 88%;
+  height: 86%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,7 +30,7 @@ export const IconContainer = styled.div`
   & .topIcon {
     cursor: pointer;
     width: 100%;
-    height: 50%;
+    height: 55%;
     color: ${(props) =>
       props.active
         ? `${GlobalTheme.colors.white}`
@@ -47,7 +47,7 @@ export const BottomIconsContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  height: 12%;
+  height: 14%;
   cursor: pointer;
 
   & .bottomIcon {

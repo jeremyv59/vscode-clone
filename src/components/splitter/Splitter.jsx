@@ -7,6 +7,7 @@ const Splitter = ({
   flexDirectionValue,
   sizes,
   minSizes,
+  snapOff,
 }) => {
   return (
     <CustomSplit
@@ -15,6 +16,7 @@ const Splitter = ({
       sizes={sizes}
       minSize={minSizes}
       direction={directionValue}
+      snapOffset={snapOff}
     >
       {children}
     </CustomSplit>

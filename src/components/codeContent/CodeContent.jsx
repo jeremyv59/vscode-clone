@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { FileContext } from "../../context/FileContext.jsx";
 import { FilesArray } from "../../data/FileData.jsx";
 import { SiVisualstudiocode } from "react-icons/si";
@@ -13,8 +13,15 @@ import {
   OptionText,
   PlusSign,
 } from "./code_content.jsx";
-import Highlight from "react-highlight";
+import javascript from "highlight.js/lib/languages/javascript";
+import css from "highlight.js/lib/languages/css";
+import Markdown from "marked-react";
+import Lowlight from "react-lowlight";
+import "highlight.js/styles/github.css";
 import Terminal from "../terminal/Terminal.jsx";
+
+Lowlight.registerLanguage("js", javascript);
+Lowlight.registerLanguage("css", css);
 
 const CodeContent = () => {
   const context = useContext(FileContext);
@@ -23,14 +30,16 @@ const CodeContent = () => {
 
   return (
     <CodeContentContainer>
-      <Splitter flexDirectionValue={"column"} directionValue={"vertical"}>
+      <Splitter
+        minSizes={[10, 0]}
+        flexDirectionValue={"column"}
+        directionValue={"vertical"}
+      >
         <ContentContainer>
           {selectedFile ? (
             FilesArray.map((file) => {
               return file.fileName === context.selectedFile ? (
-                <p key={file.id}>
-                  <Highlight language={file.language}>{file.content}</Highlight>
-                </p>
+                <Lowlight key={file.id} value={file.content}></Lowlight>
               ) : (
                 ""
               );
@@ -41,7 +50,7 @@ const CodeContent = () => {
                 style={{
                   color: "yellow",
                   width: "100%",
-                  height: "50%",
+                  height: "40%",
                   marginBottom: "2rem",
                 }}
               ></SiVisualstudiocode>

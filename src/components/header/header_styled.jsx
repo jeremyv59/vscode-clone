@@ -6,7 +6,7 @@ export const HeaderBarContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0rem 0.8rem;
+  padding: 0rem 0.6rem;
   width: 100%;
   height: 4.5vh;
 `;
@@ -14,7 +14,7 @@ export const HeaderBarContainer = styled.div`
 export const LeftPartContainer = styled.div`
   display: flex;
   width: 33%;
-  gap: 0.7rem;
+  gap: 0.3rem;
 `;
 
 export const OptionsItem = styled.p`

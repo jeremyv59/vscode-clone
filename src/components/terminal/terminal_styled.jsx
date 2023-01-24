@@ -4,6 +4,7 @@ import { GlobalTheme } from "../../theme/GlobalTheme";
 export const TerminalContainer = styled.div`
   width: 100%;
   background-color: blue;
+  overflow: hidden;
 `;
 
 export const TerminalOptionItem = styled.li`
@@ -39,8 +40,23 @@ export const TerminalHeader = styled.ul`
 
 export const TerminalContent = styled.div`
   display: flex;
+  background-color: orange;
+  align-items: center;
 `;
 
 export const PathText = styled.p`
   color: ${GlobalTheme.colors.white};
+`;
+
+export const TerminalTextArea = styled.textarea`
+  background-color: purple;
+  color: ${GlobalTheme.colors.white};
+  border: none;
+  outline: none;
+  text-align: justify;
+  -moz-text-align-last: center;
+  text-align-last: center;
+  resize: none;
+  height: 10px;
+  background: yellow;
 `;

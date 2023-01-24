@@ -19,8 +19,10 @@ function App() {
           <Sidebar open={explorerOpen} setOpen={setExplorerOpen}></Sidebar>
           <Splitter
             sizes={explorerOpen ? [15, 85] : [0, 100]}
+            snapOff={150}
             minSizes={[0, 15]}
             directionValue={"horizontal"}
+            flexDirectionValue="row"
           >
             <ExplorerMenu isOpen={explorerOpen}></ExplorerMenu>
             <CodeContent></CodeContent>

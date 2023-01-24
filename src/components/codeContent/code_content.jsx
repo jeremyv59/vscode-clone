@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { GlobalTheme } from "../../theme/GlobalTheme";
+import { SiVisualstudiocode } from "react-icons/si";
 
 export const CodeContentContainer = styled.div`
   background-color: orange;
@@ -12,13 +13,15 @@ export const CodeContentContainer = styled.div`
 `;
 
 export const ContentContainer = styled.div`
-  background-color: "green";
-  height: 80%;
-  display: flex;
+  // background-color: green;
+  height: 100%;
+  // display: flex;
   width: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  overflow-y: scroll;
 `;
 
 export const OptionContainer = styled.div`

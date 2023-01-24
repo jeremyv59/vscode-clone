@@ -40,7 +40,11 @@ const HeaderBar = () => {
   return (
     <HeaderBarContainer>
       <LeftPartContainer>
-        <SiVisualstudiocode color="#2660A4" size={20}></SiVisualstudiocode>
+        <SiVisualstudiocode
+          color="#2660A4"
+          style={{ marginRight: "0.5rem" }}
+          size={20}
+        ></SiVisualstudiocode>
         {options.map((option) => {
           return (
             <OptionItemContainer>
