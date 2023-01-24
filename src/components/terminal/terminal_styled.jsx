@@ -13,13 +13,16 @@ export const TerminalOptionItem = styled.li`
   border: 1px solid transparent;
   display: flex;
   align-items: center;
-  padding-bottom: 0.2rem;
+  padding-bottom: 0.25rem;
+
+  transition: ${GlobalTheme.transition};
 
   &:hover {
     color: ${GlobalTheme.colors.white};
   }
 
   &.selected {
+    color: ${GlobalTheme.colors.white};
     border-bottom: 1px solid ${GlobalTheme.colors.white};
   }
 `;
@@ -35,5 +38,9 @@ export const TerminalHeader = styled.ul`
 `;
 
 export const TerminalContent = styled.div`
+  display: flex;
+`;
+
+export const PathText = styled.p`
   color: ${GlobalTheme.colors.white};
 `;

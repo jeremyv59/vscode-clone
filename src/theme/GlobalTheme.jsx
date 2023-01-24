@@ -8,5 +8,5 @@ export const GlobalTheme = {
     lightGray: "#c6c7c4",
     gray: "#a2999e",
   },
-  transition: "all 400ms ease",
+  transition: "all 250ms ease-in",
 };

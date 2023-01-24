@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import {
+  PathText,
   TerminalContainer,
   TerminalContent,
   TerminalHeader,
@@ -37,7 +38,7 @@ const Terminal = () => {
         })}
       </TerminalHeader>
       <TerminalContent>
-        <p>C:\DevPerso\vscode-clone</p>
+        <PathText>C:\DevPerso\vscode-clone</PathText>
       </TerminalContent>
     </TerminalContainer>
   );

@@ -26,6 +26,10 @@ export const OptionItemContainer = styled.div`
   display: flex;
   align-items: center;
   padding: 0rem 0.3rem;
+  border-radius 8px;
+  cursor : default;
+
+  transition : ${GlobalTheme.transition};
 
   &:hover {
     background-color: ${GlobalTheme.colors.lightGray};

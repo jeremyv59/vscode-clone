@@ -37,17 +37,16 @@ export const LeftInfos = styled.div`
 export const TextInfo = styled.p`
   font-size: 13px;
   color: #ffffff;
-  cursor: pointer;
 `;
 
 export const OneInfoContainer = styled.div`
-  // background-color: green;
   height: 100%;
   padding: 0rem 0.4rem;
   gap: 0.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 
   &:hover {
     background-color: ${GlobalTheme.colors.skyBlueLight};
