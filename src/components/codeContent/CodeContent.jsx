@@ -19,6 +19,7 @@ import Markdown from "marked-react";
 import Lowlight from "react-lowlight";
 import "highlight.js/styles/github.css";
 import Terminal from "../terminal/Terminal.jsx";
+import { GlobalTheme } from "../../theme/GlobalTheme";
 
 Lowlight.registerLanguage("js", javascript);
 Lowlight.registerLanguage("css", css);
@@ -31,11 +32,12 @@ const CodeContent = () => {
   return (
     <CodeContentContainer>
       <Splitter
-        minSizes={[10, 0]}
+        minSizes={[0, 0]}
+        sizes={[100, 0]}
         flexDirectionValue={"column"}
         directionValue={"vertical"}
       >
-        <ContentContainer>
+        <ContentContainer selectedFile={selectedFile}>
           {selectedFile ? (
             FilesArray.map((file) => {
               return file.fileName === context.selectedFile ? (
@@ -48,7 +50,7 @@ const CodeContent = () => {
             <React.Fragment>
               <SiVisualstudiocode
                 style={{
-                  color: "yellow",
+                  color: GlobalTheme.colors.darkBlue,
                   width: "100%",
                   height: "40%",
                   marginBottom: "2rem",

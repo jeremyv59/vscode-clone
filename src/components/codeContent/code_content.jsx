@@ -3,7 +3,9 @@ import { GlobalTheme } from "../../theme/GlobalTheme";
 import { SiVisualstudiocode } from "react-icons/si";
 
 export const CodeContentContainer = styled.div`
-  background-color: orange;
+  // background-color: #4e495a;
+  background-color: ${(props) =>
+    props.selectedFile ? "#4e495a" : GlobalTheme.colors.darkBlueLight};
   min-width: 20%;
   width: 100%;
   height: 100%;
@@ -15,17 +17,16 @@ export const CodeContentContainer = styled.div`
 export const ContentContainer = styled.div`
   // background-color: green;
   height: 100%;
-  // display: flex;
+  display: ${(props) => (props.selectedFile ? "block" : "flex")};
   width: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  overflow-y: scroll;
+  // overflow-y: scroll;
 `;
 
 export const OptionContainer = styled.div`
-  background-color: orange;
   display: flex;
   align-items: center;
   width: 100%;
@@ -45,7 +46,7 @@ export const ContainerKeyboardItem = styled.div`
 `;
 
 export const OptionText = styled.p`
-  color: ${GlobalTheme.colors.lightGray};
+  color: ${GlobalTheme.colors.darkBlue};
   font-size: 13px;
   margin-right: 1rem;
 `;

@@ -5,7 +5,7 @@ export const ExplorerContainer = styled.div`
 `;
 
 export const ExplorerHeader = styled.div`
-  background-color: blue;
+  // background-color: blue;
   width: 100%;
   display: flex;
   align-items: center;
@@ -27,12 +27,12 @@ export const ExplorerItemContainer = styled.div`
 
   &:active {
     border-bottom: 1px solid blue;
-    background-color: blue;
+    // background-color: blue;
   }
 `;
 
 export const ExplorerItem = styled.p`
-  background-color: green;
+  // background-color: green;
   padding: 0.3rem;
   font-size: 12px;
   font-weight: bold;
@@ -40,5 +40,5 @@ export const ExplorerItem = styled.p`
 `;
 
 export const ThreeContainer = styled.div`
-  background-color: yellow;
+  // background-color: yellow;
 `;

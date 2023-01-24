@@ -8,15 +8,17 @@ const Splitter = ({
   sizes,
   minSizes,
   snapOff,
+  explorerIsOpen,
 }) => {
   return (
     <CustomSplit
       flexDirValue={flexDirectionValue}
-      gutterSize={3}
+      gutterSize={1}
       sizes={sizes}
       minSize={minSizes}
       direction={directionValue}
       snapOffset={snapOff}
+      explorerIsOpen={explorerIsOpen}
     >
       {children}
     </CustomSplit>
