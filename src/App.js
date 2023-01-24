@@ -5,12 +5,10 @@ import Sidebar from "./components/sidebar/Sidebar";
 import Splitter from "./components/splitter/Splitter";
 import ExplorerMenu from "./components/explorer/ExplorerMenu";
 import CodeContent from "./components/codeContent/CodeContent";
-import { useState } from "react";
-import FileContextProvider from "./context/FileContext";
+import { useContext, useState } from "react";
+import FileContextProvider, { FileContext } from "./context/FileContext";
 
 function App() {
-  const [selectedFile, setSelectedFile] = useState();
-
   return (
     <FileContextProvider>
       <AppContainer>
@@ -18,7 +16,7 @@ function App() {
         <MainContent>
           <Sidebar></Sidebar>
           <Splitter directionValue={"horizontal"}>
-            <ExplorerMenu setFileSelected={setSelectedFile}></ExplorerMenu>
+            <ExplorerMenu></ExplorerMenu>
             <CodeContent></CodeContent>
           </Splitter>
         </MainContent>

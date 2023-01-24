@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { createContext } from "react";
 
-const FileContext = createContext(null);
+export const FileContext = createContext();
 
 const FileContextProvider = ({ children }) => {
   const [selectedFile, setSelectedFile] = useState();
 
   return (
-    <FileContext.Provider value={{ value, setValue }}>
+    <FileContext.Provider value={{ selectedFile, setSelectedFile }}>
       {children}
     </FileContext.Provider>
   );
