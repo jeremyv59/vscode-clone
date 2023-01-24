@@ -1,6 +1,7 @@
 export const FilesArray = [
   {
     id: 1,
+    projectName: "vscode-clone",
     fileName: "Modal.js",
     language: "javascript",
     content: `

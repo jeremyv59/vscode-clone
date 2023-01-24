@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   HeaderBarContainer,
   HeaderMidTitle,
@@ -18,6 +18,8 @@ import {
 import { SiVisualstudiocode } from "react-icons/si";
 import { TbDeviceMobile } from "react-icons/tb";
 import { MdOutlineHistoryToggleOff } from "react-icons/md";
+import { FileContext } from "../../context/FileContext";
+import { FilesArray } from "../../data/FileData";
 
 const options = [
   "File",
@@ -31,6 +33,10 @@ const options = [
 ];
 
 const HeaderBar = () => {
+  const context = useContext(FileContext);
+
+  const { selectedFile } = context;
+
   return (
     <HeaderBarContainer>
       <LeftPartContainer>
@@ -46,7 +52,9 @@ const HeaderBar = () => {
 
       <MiddlePartContainer>
         <HeaderMidTitle>
-          HeaderBar.jsx - vscode-clone - Visual Studio Code
+          {selectedFile
+            ? `${selectedFile} - ${FilesArray[0].projectName} - Visual Studio Code`
+            : `${FilesArray[0].projectName} - Visual Studio Code`}
         </HeaderMidTitle>
       </MiddlePartContainer>
 
