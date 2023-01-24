@@ -10,7 +10,7 @@ import {
 import { VscEllipsis, VscChevronRight, VscChevronDown } from "react-icons/vsc";
 import CustomThree from "../three/CustomThree";
 
-const ExplorerMenu = () => {
+const ExplorerMenu = ({ isOpen }) => {
   const [projectOpened, setProjectOpened] = useState(false);
 
   const handleClickContainer = () => {
@@ -18,7 +18,7 @@ const ExplorerMenu = () => {
   };
 
   return (
-    <ExplorerContainer>
+    <ExplorerContainer open={isOpen}>
       <ExplorerHeader>
         <HeaderTitle>EXPLORER</HeaderTitle>
         <VscEllipsis color="#ffffff" size={20}></VscEllipsis>

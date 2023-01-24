@@ -6,17 +6,23 @@ import Splitter from "./components/splitter/Splitter";
 import ExplorerMenu from "./components/explorer/ExplorerMenu";
 import CodeContent from "./components/codeContent/CodeContent";
 import { useContext, useState } from "react";
-import FileContextProvider, { FileContext } from "./context/FileContext";
+import FileContextProvider from "./context/FileContext";
 
 function App() {
+  const [explorerOpen, setExplorerOpen] = useState(false);
+
   return (
     <FileContextProvider>
       <AppContainer>
         <HeaderBar></HeaderBar>
         <MainContent>
-          <Sidebar></Sidebar>
-          <Splitter directionValue={"horizontal"}>
-            <ExplorerMenu></ExplorerMenu>
+          <Sidebar open={explorerOpen} setOpen={setExplorerOpen}></Sidebar>
+          <Splitter
+            sizes={explorerOpen ? [15, 85] : [0, 100]}
+            minSizes={[0, 15]}
+            directionValue={"horizontal"}
+          >
+            <ExplorerMenu isOpen={explorerOpen}></ExplorerMenu>
             <CodeContent></CodeContent>
           </Splitter>
         </MainContent>

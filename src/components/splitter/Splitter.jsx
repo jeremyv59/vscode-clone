@@ -1,13 +1,19 @@
 import React from "react";
 import { CustomSplit } from "./splitter_styled";
 
-const Splitter = ({ directionValue, children, flexDirectionValue }) => {
+const Splitter = ({
+  directionValue,
+  children,
+  flexDirectionValue,
+  sizes,
+  minSizes,
+}) => {
   return (
     <CustomSplit
       flexDirValue={flexDirectionValue}
       gutterSize={3}
-      sizes={[15, 85]}
-      minSize={[0, 15]}
+      sizes={sizes}
+      minSize={minSizes}
       direction={directionValue}
     >
       {children}

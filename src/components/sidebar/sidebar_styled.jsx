@@ -19,7 +19,6 @@ export const TopIconsContainer = styled.div`
 
 export const IconContainer = styled.div`
   width: 100%;
-  height: 10%;
   display: flex;
   align-items: center;
   border-left: ${(props) =>
@@ -30,7 +29,7 @@ export const IconContainer = styled.div`
   & .topIcon {
     cursor: pointer;
     width: 100%;
-    height: 60%;
+    height: 55%;
     color: ${(props) =>
       props.active
         ? `${GlobalTheme.colors.white}`

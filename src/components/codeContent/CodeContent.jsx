@@ -4,7 +4,6 @@ import { FilesArray } from "../../data/FileData.jsx";
 import { SiVisualstudiocode } from "react-icons/si";
 import Splitter from "../splitter/Splitter.jsx";
 import {
-  BackgroundIconContainer,
   CodeContentContainer,
   ContainerKeyboardItem,
   ContainerOptionText,
@@ -15,6 +14,7 @@ import {
   PlusSign,
 } from "./code_content.jsx";
 import Highlight from "react-highlight";
+import Terminal from "../terminal/Terminal.jsx";
 
 const CodeContent = () => {
   const context = useContext(FileContext);
@@ -104,9 +104,7 @@ const CodeContent = () => {
             </React.Fragment>
           )}
         </ContentContainer>
-        <div style={{ backgroundColor: "purple", width: "100%" }}>
-          <p>Terminal Div</p>
-        </div>
+        <Terminal></Terminal>
       </Splitter>
     </CodeContentContainer>
   );

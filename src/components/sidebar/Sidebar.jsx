@@ -30,11 +30,12 @@ const sidebarIcons = [
   <VscGithubAlt className="topIcon" size={30}></VscGithubAlt>,
 ];
 
-const Sidebar = () => {
-  const [selectedIconId, setSelectedIconId] = useState(0);
+const Sidebar = ({ open, setOpen }) => {
+  const [selectedIconId, setSelectedIconId] = useState();
 
   const handleSelectIcon = (idValue) => {
     setSelectedIconId(idValue);
+    setOpen(!open);
   };
 
   return (

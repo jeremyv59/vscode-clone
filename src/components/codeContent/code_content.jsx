@@ -15,6 +15,7 @@ export const ContentContainer = styled.div`
   background-color: "green";
   height: 80%;
   display: flex;
+  width: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
