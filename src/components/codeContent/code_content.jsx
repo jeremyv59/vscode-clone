@@ -11,6 +11,15 @@ export const CodeContentContainer = styled.div`
   justify-content: center;
 `;
 
+export const ContentContainer = styled.div`
+  background-color: "green";
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
 export const OptionContainer = styled.div`
   background-color: orange;
   display: flex;
@@ -28,6 +37,7 @@ export const ContainerOptionText = styled.div`
 export const ContainerKeyboardItem = styled.div`
   display: flex;
   width: 50%;
+  align-items: center;
 `;
 
 export const OptionText = styled.p`

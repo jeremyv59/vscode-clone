@@ -8,6 +8,7 @@ import {
   CodeContentContainer,
   ContainerKeyboardItem,
   ContainerOptionText,
+  ContentContainer,
   KeyboardItem,
   OptionContainer,
   OptionText,
@@ -23,16 +24,7 @@ const CodeContent = () => {
   return (
     <CodeContentContainer>
       <Splitter flexDirectionValue={"column"} directionValue={"vertical"}>
-        <div
-          style={{
-            backgroundColor: "green",
-            maxHeight: "100%",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
+        <ContentContainer>
           {selectedFile ? (
             FilesArray.map((file) => {
               return file.fileName === context.selectedFile ? (
@@ -111,7 +103,7 @@ const CodeContent = () => {
               </OptionContainer>
             </React.Fragment>
           )}
-        </div>
+        </ContentContainer>
         <div style={{ backgroundColor: "purple", width: "100%" }}>
           <p>Terminal Div</p>
         </div>
