@@ -6,6 +6,7 @@ import {
   TerminalHeader,
   TerminalOptionItem,
   TerminalTextArea,
+  TextAreaContainer,
 } from "./terminal_styled";
 
 const terminalOptions = [
@@ -38,10 +39,14 @@ const Terminal = () => {
           );
         })}
       </TerminalHeader>
-      <TerminalContent>
+      {/* <TerminalContent> */}
+      {/* <PathText>C:\DevPerso\vscode-clone{">"}</PathText> */}
+      <TextAreaContainer>
         <PathText>C:\DevPerso\vscode-clone{">"}</PathText>
         <TerminalTextArea></TerminalTextArea>
-      </TerminalContent>
+      </TextAreaContainer>
+
+      {/* </TerminalContent> */}
     </TerminalContainer>
   );
 };

@@ -23,7 +23,7 @@ export const ContentContainer = styled.div`
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  // overflow-y: scroll;
+  overflow-y: scroll;
 `;
 
 export const OptionContainer = styled.div`
