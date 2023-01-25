@@ -3,7 +3,7 @@
 * Installer les dépendances (npm i)
 * Lancer l'application (npm start)
 
-####Les outils utilisés dans l'app
+#### Les outils utilisés dans l'app
 * ReactJS/HTML/CSS
 * Styled-components
 * React-split
