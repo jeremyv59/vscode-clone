@@ -45,9 +45,9 @@ const HeaderBar = () => {
           style={{ marginRight: "0.5rem" }}
           size={20}
         ></SiVisualstudiocode>
-        {options.map((option) => {
+        {options.map((option, index) => {
           return (
-            <OptionItemContainer>
+            <OptionItemContainer key={index}>
               <OptionsItem>{option}</OptionsItem>
             </OptionItemContainer>
           );

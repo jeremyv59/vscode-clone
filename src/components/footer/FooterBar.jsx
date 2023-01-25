@@ -101,12 +101,12 @@ const FooterBar = () => {
       </RemoteContainer>
       <ContainerInfos>
         <LeftInfos>
-          {leftInfos.map((info) => {
+          {leftInfos.map((info, index) => {
             return (
-              <OneInfoContainer>
+              <OneInfoContainer key={index}>
                 {info.icon.map((icon, index) => {
                   return (
-                    <React.Fragment>
+                    <React.Fragment key={index}>
                       {icon}
                       {info.text.length > 0 ? (
                         <TextInfo>{info.text[index]}</TextInfo>
@@ -119,20 +119,20 @@ const FooterBar = () => {
           })}
         </LeftInfos>
         <RightInfos>
-          {rightInfos.map((info) => {
+          {rightInfos.map((info, index) => {
             return (
-              <OneInfoContainer>
+              <OneInfoContainer key={index}>
                 {info.icon.length > 0
                   ? info.icon.map((icon, index) => {
                       return (
-                        <React.Fragment>
+                        <React.Fragment key={index}>
                           {icon}
                           <TextInfo>{info.text[index]}</TextInfo>
                         </React.Fragment>
                       );
                     })
-                  : info.text.map((text) => {
-                      return <TextInfo>{text}</TextInfo>;
+                  : info.text.map((text, index) => {
+                      return <TextInfo key={index}>{text}</TextInfo>;
                     })}
               </OneInfoContainer>
             );
