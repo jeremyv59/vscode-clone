@@ -3,7 +3,7 @@ import { GlobalTheme } from "../../theme/GlobalTheme";
 
 export const TerminalContainer = styled.div`
   width: 100%;
-  background-color: blue;
+  background-color: ${GlobalTheme.colors.darkBlue};
   overflow: hidden;
 `;
 
@@ -39,7 +39,6 @@ export const TerminalHeader = styled.ul`
 
 export const TerminalContent = styled.div`
   display: flex;
-  background-color: orange;
   align-items: center;
   padding: 1rem;
 `;

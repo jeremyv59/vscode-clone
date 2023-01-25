@@ -24,7 +24,10 @@ const ExplorerMenu = ({ isOpen }) => {
         <VscEllipsis color="#ffffff" size={20}></VscEllipsis>
       </ExplorerHeader>
 
-      <ExplorerItemContainer onClick={handleClickContainer}>
+      <ExplorerItemContainer
+        projectOpened={projectOpened}
+        onClick={handleClickContainer}
+      >
         {projectOpened ? (
           <VscChevronDown color="#ffffff"></VscChevronDown>
         ) : (
@@ -33,7 +36,7 @@ const ExplorerMenu = ({ isOpen }) => {
         <ExplorerItem>VSCODE-CLONE</ExplorerItem>
       </ExplorerItemContainer>
       {projectOpened ? (
-        <ThreeContainer>
+        <ThreeContainer projectOpened={projectOpened}>
           <CustomThree>
             <CustomThree.Folder name="src">
               <CustomThree.Folder name="components">

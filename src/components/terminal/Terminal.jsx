@@ -39,14 +39,9 @@ const Terminal = () => {
           );
         })}
       </TerminalHeader>
-      {/* <TerminalContent> */}
-      {/* <PathText>C:\DevPerso\vscode-clone{">"}</PathText> */}
-      <TextAreaContainer>
+      <TerminalContent>
         <PathText>C:\DevPerso\vscode-clone{">"}</PathText>
-        <TerminalTextArea></TerminalTextArea>
-      </TextAreaContainer>
-
-      {/* </TerminalContent> */}
+      </TerminalContent>
     </TerminalContainer>
   );
 };

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { GlobalTheme } from "../../theme/GlobalTheme";
 
 export const SidebarContainer = styled.div`
-  background-color: ${GlobalTheme.colors.darkBlueLight};
+  background-color: ${GlobalTheme.colors.skyBlue};
   width: 4%;
   height: 100%;
   display: flex;

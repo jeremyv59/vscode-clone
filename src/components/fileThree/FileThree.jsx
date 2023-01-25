@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { AiOutlineFile } from "react-icons/ai";
 import { FileContext } from "../../context/FileContext";
 import FILE_ICONS from "../../utils/FileIcons";
-import { StyledFileThree } from "./file_three_styled";
+import { StyledFileName, StyledFileThree } from "./file_three_styled";
 
 const FileThree = ({ name }) => {
   let ext = name.split(".")[1];
@@ -16,7 +16,7 @@ const FileThree = ({ name }) => {
   return (
     <StyledFileThree onClick={() => updateFileSelected(name)}>
       {FILE_ICONS[ext] || <AiOutlineFile />}
-      <span>{name}</span>
+      <StyledFileName>{name}</StyledFileName>
     </StyledFileThree>
   );
 };

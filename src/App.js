@@ -20,7 +20,7 @@ function App() {
           <Splitter
             sizes={explorerOpen ? [15, 85] : [0, 100]}
             snapOff={150}
-            minSizes={[0, 10]}
+            minSizes={[0, 15]}
             directionValue={"horizontal"}
             flexDirectionValue="row"
           >

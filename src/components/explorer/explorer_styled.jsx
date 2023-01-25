@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import { GlobalTheme } from "../../theme/GlobalTheme";
 
 export const ExplorerContainer = styled.div`
-  background-color: brown;
+  background-color: ${GlobalTheme.colors.darkBlueLight};
 `;
 
 export const ExplorerHeader = styled.div`
@@ -9,7 +10,7 @@ export const ExplorerHeader = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
-  padding: 0.8rem;
+  padding: 0.8rem 1.4rem;
   justify-content: space-between;
 `;
 
@@ -23,12 +24,9 @@ export const ExplorerItemContainer = styled.div`
   align-items: center;
   width: 100%;
   cursor: pointer;
-  border-bottom: 1px solid black;
-
-  &:active {
-    border-bottom: 1px solid blue;
-    // background-color: blue;
-  }
+  padding-left: 0.2rem;
+  border-bottom: ${(props) =>
+    props.projectOpened ? "none" : `1px solid ${GlobalTheme.colors.gray}`};
 `;
 
 export const ExplorerItem = styled.p`
@@ -40,5 +38,7 @@ export const ExplorerItem = styled.p`
 `;
 
 export const ThreeContainer = styled.div`
-  // background-color: yellow;
+  padding-bottom: 0.5rem;
+  border-bottom: ${(props) =>
+    props.projectOpened ? `1px solid ${GlobalTheme.colors.gray}` : "none"};
 `;

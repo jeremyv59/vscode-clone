@@ -6,7 +6,7 @@ export const CodeContentContainer = styled.div`
   // background-color: #4e495a;
   background-color: ${(props) =>
     props.selectedFile ? "#4e495a" : GlobalTheme.colors.darkBlueLight};
-  min-width: 20%;
+  min-width: 25%;
   width: 100%;
   height: 100%;
   display: flex;

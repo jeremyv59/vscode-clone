@@ -1,7 +1,11 @@
 import React, { useState } from "react";
-import { Collapsible, StyledFolder } from "./folder_three_styled";
-import { AiOutlineFolder } from "react-icons/ai";
-import { VscEllipsis, VscChevronRight, VscChevronDown } from "react-icons/vsc";
+import {
+  Collapsible,
+  StyledFolder,
+  StyledFolderName,
+} from "./folder_three_styled";
+import { VscChevronRight, VscChevronDown } from "react-icons/vsc";
+import { GlobalTheme } from "../../theme/GlobalTheme";
 
 const FolderThree = ({ name, children }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,15 +14,16 @@ const FolderThree = ({ name, children }) => {
     e.preventDefault();
     setIsOpen(!isOpen);
   };
+
   return (
     <StyledFolder>
       <div className="folder--label" onClick={handleToggle}>
         {isOpen ? (
-          <VscChevronDown color="black"></VscChevronDown>
+          <VscChevronDown color={GlobalTheme.colors.white}></VscChevronDown>
         ) : (
-          <VscChevronRight></VscChevronRight>
+          <VscChevronRight color={GlobalTheme.colors.white}></VscChevronRight>
         )}
-        <span>{name}</span>
+        <StyledFolderName>{name}</StyledFolderName>
       </div>
       <Collapsible isOpen={isOpen}>{children}</Collapsible>
     </StyledFolder>
