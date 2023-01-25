@@ -6,7 +6,6 @@ export const ExplorerContainer = styled.div`
 `;
 
 export const ExplorerHeader = styled.div`
-  // background-color: blue;
   width: 100%;
   display: flex;
   align-items: center;
@@ -16,7 +15,7 @@ export const ExplorerHeader = styled.div`
 
 export const HeaderTitle = styled.p`
   font-size: 12px;
-  color: #ffffff;
+  color: ${GlobalTheme.colors.white};
 `;
 
 export const ExplorerItemContainer = styled.div`
@@ -30,11 +29,10 @@ export const ExplorerItemContainer = styled.div`
 `;
 
 export const ExplorerItem = styled.p`
-  // background-color: green;
   padding: 0.3rem;
   font-size: 12px;
   font-weight: bold;
-  color: #ffffff;
+  color: ${GlobalTheme.colors.white};
 `;
 
 export const ThreeContainer = styled.div`

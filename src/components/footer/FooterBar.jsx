@@ -13,8 +13,6 @@ import {
   VscSourceControl,
   VscLiveShare,
   VscRefresh,
-  VscArrowDown,
-  VscArrowUp,
   VscGitMerge,
   VscError,
   VscWarning,

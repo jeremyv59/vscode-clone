@@ -17,7 +17,6 @@ import {
   VscAccount,
   VscSettingsGear,
 } from "react-icons/vsc";
-import { GlobalTheme } from "../../theme/GlobalTheme";
 
 const sidebarIcons = [
   <VscCopy className="topIcon" size={30}></VscCopy>,

@@ -3,7 +3,6 @@ import { GlobalTheme } from "../../theme/GlobalTheme";
 import { SiVisualstudiocode } from "react-icons/si";
 
 export const CodeContentContainer = styled.div`
-  // background-color: #4e495a;
   background-color: ${(props) =>
     props.selectedFile ? "#4e495a" : GlobalTheme.colors.darkBlueLight};
   min-width: 25%;
@@ -15,7 +14,6 @@ export const CodeContentContainer = styled.div`
 `;
 
 export const ContentContainer = styled.div`
-  // background-color: green;
   height: 100%;
   display: ${(props) => (props.selectedFile ? "block" : "flex")};
   width: 100%;

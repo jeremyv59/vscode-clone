@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import {
   ExplorerContainer,
   ExplorerHeader,
@@ -9,6 +9,8 @@ import {
 } from "./explorer_styled";
 import { VscEllipsis, VscChevronRight, VscChevronDown } from "react-icons/vsc";
 import CustomThree from "../three/CustomThree";
+import { FilesArray } from "../../data/FileData";
+import { GlobalTheme } from "../../theme/GlobalTheme";
 
 const ExplorerMenu = ({ isOpen }) => {
   const [projectOpened, setProjectOpened] = useState(false);
@@ -21,7 +23,7 @@ const ExplorerMenu = ({ isOpen }) => {
     <ExplorerContainer open={isOpen}>
       <ExplorerHeader>
         <HeaderTitle>EXPLORER</HeaderTitle>
-        <VscEllipsis color="#ffffff" size={20}></VscEllipsis>
+        <VscEllipsis color={GlobalTheme.colors.white} size={20}></VscEllipsis>
       </ExplorerHeader>
 
       <ExplorerItemContainer
@@ -33,7 +35,7 @@ const ExplorerMenu = ({ isOpen }) => {
         ) : (
           <VscChevronRight color="#ffffff"></VscChevronRight>
         )}
-        <ExplorerItem>VSCODE-CLONE</ExplorerItem>
+        <ExplorerItem>{FilesArray[0].projectName}</ExplorerItem>
       </ExplorerItemContainer>
       {projectOpened ? (
         <ThreeContainer projectOpened={projectOpened}>

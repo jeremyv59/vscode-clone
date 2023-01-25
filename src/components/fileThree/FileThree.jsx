@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import { AiOutlineFile } from "react-icons/ai";
 import { FileContext } from "../../context/FileContext";
 import FILE_ICONS from "../../utils/FileIcons";

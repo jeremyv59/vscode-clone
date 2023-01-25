@@ -5,8 +5,6 @@ import {
   TerminalContent,
   TerminalHeader,
   TerminalOptionItem,
-  TerminalTextArea,
-  TextAreaContainer,
 } from "./terminal_styled";
 
 const terminalOptions = [

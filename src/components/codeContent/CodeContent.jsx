@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import { FileContext } from "../../context/FileContext.jsx";
 import { FilesArray } from "../../data/FileData.jsx";
 import { SiVisualstudiocode } from "react-icons/si";

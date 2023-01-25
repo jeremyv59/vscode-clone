@@ -13,7 +13,7 @@ const Splitter = ({
   return (
     <CustomSplit
       flexDirValue={flexDirectionValue}
-      gutterSize={1}
+      gutterSize={1.5}
       sizes={sizes}
       minSize={minSizes}
       direction={directionValue}
