@@ -11,7 +11,6 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-highlight": "^0.15.0",
-    "react-highlight-js": "^0.15.0",
     "react-icons": "^4.7.1",
     "react-lowlight": "^3.0.0",
     "react-resizable": "^3.0.4",

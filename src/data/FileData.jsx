@@ -198,4 +198,83 @@ export const FilesArray = [
         );
           `,
   },
+
+  {
+    id: 4,
+    fileName: "index.html",
+    language: "html",
+    content: `
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#000000" />
+        <meta name="description" content="Web site created using create-react-app"/>
+
+        <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+        <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+      <title>VSCode - Clone</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>
+    `,
+  },
+  {
+    id: 5,
+    fileName: "package.json",
+    language: "json",
+    content: `
+    "name": "vscode-clone",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+      "@testing-library/jest-dom": "^5.16.5",
+      "@testing-library/react": "^13.4.0",
+      "@testing-library/user-event": "^13.5.0",
+      "highlight.js": "^11.7.0",
+      "marked-react": "^1.3.2",
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0",
+      "react-highlight": "^0.15.0",
+      "react-highlight-js": "^0.15.0",
+      "react-icons": "^4.7.1",
+      "react-lowlight": "^3.0.0",
+      "react-resizable": "^3.0.4",
+      "react-scripts": "5.0.1",
+      "react-split": "^2.0.14",
+      "styled-components": "^5.3.6",
+      "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+    `,
+  },
 ];
